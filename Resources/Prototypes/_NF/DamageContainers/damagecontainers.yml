@@ -1,0 +1,14 @@
+- type: damageContainer
+  id: StationBankStorage
+  name: Station Bank Storage
+  description: Damage container for station bank storage device
+  damageThresholds:
+    - type: Structure
+      threshold: 10000
+      effects:
+        - type: ChangeState
+          state: "on"
+    - type: Destruction
+      threshold: 10000
+      effects:
+        - type: Destroy

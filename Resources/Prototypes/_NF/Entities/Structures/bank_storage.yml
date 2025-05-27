@@ -1,0 +1,139 @@
+- type: entity
+  name: station bank storage
+  id: StationBankStorage
+  parent: [BaseStructureDisableScrewing, BaseStructureDisablePrying, BaseStructureIndestructible, ComputerBankATMDeposit]
+  description: Special bank storage device that accumulates credits for Frontier account based on stored amount.
+  components:
+  - type: StationBankATM
+    account: Frontier
+    cashSlot:
+      name: bank-ATM-cashSlot
+      insertSound: /Audio/Machines/scanning.ogg
+      ejectSound: /Audio/Machines/tray_eject.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+          - Cash
+    account: Frontier
+    maxAmount: 250000
+    interestRates:
+      - threshold: 10000
+        rate: 500
+      - threshold: 25000
+        rate: 1700
+      - threshold: 50000
+        rate: 4000
+      - threshold: 100000
+        rate: 8000
+      - threshold: 150000
+        rate: 12000
+      - threshold: 200000
+        rate: 16500
+      - threshold: 250000
+        rate: 24000
+    updateInterval: 300
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Structures/Machines/bank_case.rsi
+    State: icon
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: on
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: broke
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        prototype: "WreckStationBankStorage"
+        amount: 1
+  - type: Appearance
+    toggles:
+      - id: "power"
+        name: "Power"
+        description: "Whether the device is powered."
+        states:
+          - state: "on"
+            value: true
+          - state: "idle"
+            value: false
+  - type: UserInterface
+    interfaces:
+      enum.BankATMMenuUiKey.ATM:
+        type: BankATMMenuBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BankATMMenuUiKey.ATM
+  - type: Computer
+    board: Null
+#  - type: ApcPowerReceiver
+#    currentDraw: 100
+#    maxDraw: 100
+#    powerNode: "PowerCell"
+  - type: ItemSlots
+    name: bank-ATM-cashSlot
+    insertSound: /Audio/Machines/scanning.ogg
+    ejectSound: /Audio/Machines/tray_eject.ogg
+    ejectOnBreak: true
+  - type: ContainerContainer
+    containers:
+      bank-ATM-cashSlot: !type:ContainerSlot
+  - type: Transform
+    localRotation: 0
+    localPosition: (0, 0, 0)
+    localScale: (1, 1, 1)
+  - type: Physics
+    bodyType: Static
+    gravity: false
+    fixedRotation: true
+    colliders:
+      - type: Box
+        size: (1, 1)
+        offset: (0, 0)
+        density: 1
+        friction: 0.5
+        restitution: 0.1
+
+- type: entity
+  name: broken station bank storage
+  id: WreckStationBankStorage
+  description: The remains of a destroyed station bank storage.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Machines/bank_case.rsi
+    State: broke
+  - type: Transform
+    localRotation: 0
+    localPosition: (0, 0, 0)
+    localScale: (1, 1, 1)
+  - type: Physics
+    bodyType: Static
+    gravity: false
+    fixedRotation: true
+    colliders:
+      - type: Box
+        size: (1, 1)
+        offset: (0, 0)
+        density: 1
+        friction: 0.5
+        restitution: 0.1
