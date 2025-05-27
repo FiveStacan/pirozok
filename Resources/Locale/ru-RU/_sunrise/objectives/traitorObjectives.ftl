@@ -1,0 +1,8 @@
+ent-MultiphaseEnergygunStealObjective = { ent-BaseTraitorStealObjective }
+    .desc = { ent-BaseTraitorStealObjective.desc }
+ent-CMOAdvancedDefibrillatorStealObjective = { ent-BaseCMOStealObjective }
+    .desc = { ent-BaseCMOStealObjective.desc }
+ent-PlutoniumCoreStealObjective = { ent-BaseTraitorStealObjective }
+    .desc = { ent-BaseTraitorStealObjective.desc }
+ent-StealSupermatterSliverObjective = { ent-BaseTraitorStealObjective }
+    .desc = { ent-BaseTraitorStealObjective.desc }

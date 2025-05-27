@@ -1,0 +1,14 @@
+ent-PowerCellSyndicate = батарея гипер ёмкости Syndicate
+    .desc = { ent-PowerCellNanoTrasen.desc }
+    .suffix = Полный
+ent-PowerCellNanoTrasen = батарея гипер ёмкости NanoTrasen
+    .desc = Стандартизированный перезаряжаемый элемент питания. накопитель гипер ёмкости военного типа, имеет встроенную ЭМИ защиту.
+    .suffix = Полный
+ent-PowerCellMakeshift = самодельная энергоячейка
+    .desc = Самодельная энергоячейка. Собрана из подручных материалов.
+    .suffix = Полный
+
+### MakeshiftPowerCage
+ent-MakeshiftPowerCage = самодельная энергоячейка
+    .desc = Самодельная энергоячейка. Лучше, чем ничего, наверное...
+    .suffix = Полная
