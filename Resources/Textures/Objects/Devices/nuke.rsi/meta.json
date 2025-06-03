@@ -14,7 +14,15 @@
       "name": "nuclearbomb_deployed_unlit"
     },
     {
-      "name": "nuclearbomb_gay"
+      "name": "nuclearbomb_gay",
+      "delays": [
+        [
+	      3.5,
+          2,
+          1,
+          0.1
+        ]
+      ]
     },
     {
       "name": "nukefestive",

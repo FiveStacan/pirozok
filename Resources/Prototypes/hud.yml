@@ -3,7 +3,7 @@
   id: SS14OperativeTheme
   name: ui-options-hud-theme-Operative
   path: Operative
-  order: 6
+  order: 7
 
 - type: hudTheme
   id: SS14DefaultTheme

@@ -1,7 +1,9 @@
 - type: entity
   parent: AirlockExternalGlass
   id: AirlockExternalGlassNfsd
-  suffix: NFSD, Glass 
+  suffix: NFSD, Glass
   components:
+  - type: Airlock
+    openUnlitVisible: false
   - type: Sprite
     sprite: _NF/Structures/Doors/Airlocks/Glass/externalnfsd.rsi

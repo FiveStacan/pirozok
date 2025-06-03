@@ -16,10 +16,16 @@
       "name": "icon-shipyard"
     },
     {
+      "name": "icon-janitor"
+    },
+    {
       "name": "ammo"
     },
     {
       "name": "ammo-shipyard"
+    },
+    {
+      "name": "ammo-jenitor"
     },
     {
       "name": "ammo-inhand-left",
@@ -40,6 +46,7 @@
     {
       "name": "inhand-right",
       "directions": 4
+    }
     }
   ]
 }

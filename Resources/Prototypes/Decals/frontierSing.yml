@@ -1,0 +1,78 @@
+﻿- type: decal
+  id: FrontierStationSign1
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign1
+
+- type: decal
+  id: FrontierStationSign2
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign2
+
+- type: decal
+  id: FrontierStationSign3
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign3
+
+- type: decal
+  id: FrontierStationSign4
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign4
+
+- type: decal
+  id: FrontierStationSign5
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign5
+
+- type: decal
+  id: FrontierStationSign6
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign6
+
+- type: decal
+  id: FrontierStationSign7
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign7
+
+- type: decal
+  id: FrontierStationSign8
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign8
+
+- type: decal
+  id: FrontierStationSign9
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign9
+
+- type: decal
+  id: FrontierStationSign10
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign10
+
+- type: decal
+  id: FrontierStationSign11
+  tags: ["station"]
+  sprite:
+    sprite: Decals/frontiersSing.rsi
+    state: ss14sign11
+
+

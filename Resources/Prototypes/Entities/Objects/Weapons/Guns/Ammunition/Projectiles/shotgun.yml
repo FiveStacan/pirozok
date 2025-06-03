@@ -59,6 +59,36 @@
     spread: 15
 
 - type: entity
+  id: PelletShotgunSpread12
+  categories: [ HideSpawnMenu ]
+  parent: PelletShotgun
+  components:
+  - type: ProjectileSpread
+    proto: PelletShotgun
+    count: 8
+    spread: 8.5
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        Blunt: 2
+        Structural: 1
+
+- type: entity
+  id: PelletShapGibber
+  categories: [ HideSpawnMenu ]
+  parent: PelletShotgun
+  components:
+  - type: ProjectileSpread
+    proto: PelletShotgun
+    count: 24
+    spread: 90
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+
+- type: entity
   id: PelletShotgunIncendiary
   name: pellet (.50 incendiary)
   categories: [ HideSpawnMenu ]

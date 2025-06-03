@@ -73,7 +73,7 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Shutters/blastdoor.rsi
-    state: assembly
+    state: open
   - type: InteractionOutline
   - type: Damageable
     damageContainer: StructuralInorganic

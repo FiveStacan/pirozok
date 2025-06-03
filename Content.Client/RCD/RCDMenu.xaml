@@ -6,7 +6,7 @@
                 VerticalExpand="True"
                 HorizontalExpand="True"
                 MinSize="450 450">
-    
+
     <!-- Note: The min size of the window just determine how close to the edge of the screen the center of the radial menu can be placed -->
     <!-- The radial menu will try to open so that its center is located where the player's cursor is currently -->
 
@@ -27,6 +27,15 @@
         <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-lighting'}" TargetLayer="Lighting" Visible="False">
             <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Interface/Radial/RCD/lighting.png"/>
         </ui:RadialMenuTextureButtonWithSector>
+        <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-sings'}" TargetLayer="Sings" Visible="False">
+            <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Structures/Wallmounts/posters.rsi/poster55_contraband.png"/>
+        </ui:RadialMenuTextureButtonWithSector>
+        <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-janitor'}" TargetLayer="Janitor" Visible="False">
+            <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Interface/Radial/RCD/janutor.png"/>
+        </ui:RadialMenuTextureButtonWithSector>
+        <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-floor'}" TargetLayer="Floor" Visible="False">
+            <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Interface/Radial/RCD/janutor.png"/>
+        </ui:RadialMenuTextureButtonWithSector>
     </ui:RadialContainer>
 
     <!-- Walls and flooring -->
@@ -40,8 +49,17 @@
 
     <!-- Computer and machine frames -->
     <ui:RadialContainer Name="Electrical"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
-       
+
     <!-- Lighting -->
     <ui:RadialContainer Name="Lighting"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+
+    <!-- Lighting -->
+    <ui:RadialContainer Name="Sings"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+
+    <!-- Lighting -->
+    <ui:RadialContainer Name="Janitor"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+
+    <!-- Lighting -->
+    <ui:RadialContainer Name="Floor"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
 
 </ui:RadialMenu>

@@ -265,6 +265,9 @@
   id: Cartridge
 
 - type: Tag
+  id: ShellShotgun12
+
+- type: Tag
   id: CartridgeAntiMateriel
 
 - type: Tag

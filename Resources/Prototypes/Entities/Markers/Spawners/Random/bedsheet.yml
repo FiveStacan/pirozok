@@ -29,3 +29,35 @@
         - BedsheetRainbow
       chance: 0.97
       offset: 0
+
+- type: entity
+  name: Случайное одеяло
+  id: BedsheetSpawnerRDCJ
+  parent: BedsheetSpawner
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Objects/Misc/bedsheets.rsi
+          state: random_bedsheet
+    - type: RandomSpawner
+      rarePrototypes:
+        - BedsheetIan
+        - BedsheetCosmos
+        - Ash
+      rareChance: 0.03
+      prototypes:
+        - BedsheetBlue
+        - BedsheetYellow
+        - BedsheetOrange
+        - BedsheetGreen
+        - BedsheetNT
+        - BedsheetRed
+        - BedsheetUSA
+        - BedsheetBrown
+        - BedsheetBlack
+        - BedsheetPurple
+        - BedsheetGrey
+        - BedsheetWhite
+        - BedsheetRainbow
+      chance: 0.97
+      offset: 0

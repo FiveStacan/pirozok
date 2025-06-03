@@ -97,6 +97,7 @@
   materials:
     Steel: 2000
     Gold: 500
+    Plasteel: 50
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
@@ -390,6 +391,15 @@
   result: BoxLethalshot
   materials:
     Steel: 320
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BoxLethalshot12
+  result: BoxLethalshot12
+  materials:
+    Steel: 300
+    Plastic: 120
+    Plasteel: 50
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

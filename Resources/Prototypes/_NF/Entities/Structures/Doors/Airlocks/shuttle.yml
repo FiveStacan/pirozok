@@ -5,6 +5,8 @@
   suffix: NFSD, Docking
   description: An incomplete structure necessary for connecting two space craft together.
   components:
+  - type: Airlock
+    openUnlitVisible: false
   - type: Sprite
     sprite: _NF/Structures/Doors/Airlocks/Standard/docknfsd.rsi
     state: closed
@@ -19,6 +21,8 @@
   suffix: NFSD, Glass, Docking
   description: Necessary for connecting two space craft together.
   components:
+  - type: Airlock
+    openUnlitVisible: false
   - type: Sprite
     sprite: _NF/Structures/Doors/Airlocks/Glass/docknfsd.rsi
   - type: Construction
@@ -32,6 +36,8 @@
   suffix: NFSD, Docking
   description: Necessary for connecting two space craft together.
   components:
+  - type: Airlock
+    openUnlitVisible: false
   - type: Sprite
     sprite: _NF/Structures/Doors/Airlocks/Standard/docknfsd.rsi
   - type: Construction

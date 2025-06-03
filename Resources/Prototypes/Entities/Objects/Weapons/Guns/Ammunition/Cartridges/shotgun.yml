@@ -86,6 +86,42 @@
     proto: PelletShotgunSpread
 
 - type: entity
+  id: ShellShotgun12
+  name: shell (.12 pellet)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun12
+  - type: CartridgeAmmo
+    proto: PelletShotgunSpread12
+    soundEject:
+      collection: ShellEject
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+      - state: basetw
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: ShellShotgunGibber
+  name: shell (Gibber)
+  parent: BaseShellShotgun
+  components:
+  - type: CartridgeAmmo
+    proto: PelletShapGibber
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+    - state: basetw
+      map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: entity
   id: ShellShotgunIncendiary
   name: shell (.50 incendiary)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband

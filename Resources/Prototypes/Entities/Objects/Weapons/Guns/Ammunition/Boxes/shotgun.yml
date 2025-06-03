@@ -66,6 +66,24 @@
       - state: lethal
 
 - type: entity
+  name: ammunition box (.12 pellet)
+  parent: AmmoProviderShotgunShell
+  id: BoxLethalshot12
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun12
+      capacity: 24
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: flare
+    - type: StaticPrice
+      price: 50
+
+- type: entity
   name: ammunition box (.50 slug)
   parent: AmmoProviderShotgunShell
   id: BoxShotgunSlug

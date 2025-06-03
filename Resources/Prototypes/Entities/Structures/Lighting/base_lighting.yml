@@ -374,6 +374,7 @@
 
 - type: entity
   id: PoweredDimSmallLight
+  name: маленький светильник (тусклый)
   suffix: Dim
   parent: PoweredSmallLightEmpty
   components:
@@ -395,6 +396,7 @@
 
 - type: entity
   id: PoweredWarmSmallLight
+  name: маленький светильник (тёплый)
   suffix: Warm
   parent: PoweredSmallLightEmpty
   components:

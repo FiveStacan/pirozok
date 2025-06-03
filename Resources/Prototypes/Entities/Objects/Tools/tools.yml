@@ -347,6 +347,41 @@
     key: enum.RcdUiKey.Key
 
 - type: entity
+  id: RCDJanitor
+  parent: RCD
+  name: РСУ уборщика
+  description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - LVCable
+    - WindowDirectional
+    - Grille
+    - JanitorialTrolley
+    - CratePlastic
+    - cleanbot
+    - TubeLight
+    - BulbLight
+    - JanitorServiceLight
+    - PoweredWarmSmallLight
+    - PoweredDimSmallLight
+    - SignalButton
+    - HoloFan
+    - BedsheetSpawnerRDCJ
+    - HolosignWetFloor
+  - type: Sprite
+    sprite: _NF/Objects/Tools/rcd.rsi # Frontier
+    state: icon-janitor
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _NF/Objects/Tools/rcd.rsi/janitor.rci # Frontier
+    quickEquip: false
+    slots:
+    - Belt
+
+
+- type: entity
   id: RCDEmpty
   parent: RCD
   suffix: Empty

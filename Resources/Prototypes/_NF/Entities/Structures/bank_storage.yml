@@ -5,7 +5,6 @@
   description: Special bank storage device that accumulates credits for Frontier account based on stored amount.
   components:
   - type: StationBankATM
-    account: Frontier
     cashSlot:
       name: bank-ATM-cashSlot
       insertSound: /Audio/Machines/scanning.ogg
@@ -117,23 +116,25 @@
 - type: entity
   name: broken station bank storage
   id: WreckStationBankStorage
+  parent: BaseStructureDynamic
   description: The remains of a destroyed station bank storage.
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/bank_case.rsi
-    State: broke
-  - type: Transform
-    localRotation: 0
-    localPosition: (0, 0, 0)
-    localScale: (1, 1, 1)
+    State: icon
   - type: Physics
     bodyType: Static
-    gravity: false
     fixedRotation: true
-    colliders:
-      - type: Box
-        size: (1, 1)
-        offset: (0, 0)
-        density: 1
-        friction: 0.5
-        restitution: 0.1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 3
+      - !type:DoActsBehavior
+        acts: ["Destruction"]

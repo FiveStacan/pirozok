@@ -2,7 +2,7 @@
 - type: rcd
   id: Invalid   # Hidden prototype - do not add to RCDs
   mode: Invalid
-  
+
 - type: rcd
   id: Deconstruct
   name: rcd-component-deconstruct
@@ -13,14 +13,14 @@
   rotation: Camera
 
 - type: rcd
-  id: DeconstructLattice   # Hidden prototype - do not add to RCDs  
+  id: DeconstructLattice   # Hidden prototype - do not add to RCDs
   name: rcd-component-deconstruct
   mode: Deconstruct
   cost: 2
   delay: 0
   rotation: Camera
   fx: EffectRCDConstruct0
-    
+
 - type: rcd
   id: DeconstructTile      # Hidden prototype - do not add to RCDs
   name: rcd-component-deconstruct
@@ -30,7 +30,7 @@
   rotation: Camera
   fx: EffectRCDDeconstruct4
 
-# Flooring 
+# Flooring
 - type: rcd
   id: Plating
   name: rcd-component-plating
@@ -44,7 +44,7 @@
   rules:
     - CanBuildOnEmptyTile
   fx: EffectRCDConstruct1
-  
+
 - type: rcd
   id: FloorSteel
   name: rcd-component-floor-steel
@@ -80,7 +80,7 @@
   category: WallsAndFlooring
   sprite: /Textures/Interface/Radial/RCD/solid_wall.png
   mode: ConstructObject
-  prototype: WallSolid 
+  prototype: WallSolid
   cost: 4
   delay: 2
   collisionMask: FullTileMask
@@ -113,7 +113,7 @@
     - IsWindow
   rotation: Fixed
   fx: EffectRCDConstruct2
-  
+
 - type: rcd
   id: WindowDirectional
   category: WindowsAndGrilles
@@ -128,7 +128,7 @@
     - IsWindow
   rotation: User
   fx: EffectRCDConstruct1
-  
+
 - type: rcd
   id: ReinforcedWindow
   category: WindowsAndGrilles
@@ -142,7 +142,7 @@
     - IsWindow
   rotation: User
   fx: EffectRCDConstruct3
-    
+
 - type: rcd
   id: WindowReinforcedDirectional
   category: WindowsAndGrilles
@@ -170,7 +170,7 @@
   collisionMask: FullTileMask
   rotation: Camera
   fx: EffectRCDConstruct4
-  
+
 - type: rcd
   id: AirlockGlass
   category: Airlocks
@@ -182,7 +182,7 @@
   collisionMask: FullTileMask
   rotation: Camera
   fx: EffectRCDConstruct4
-  
+
 - type: rcd
   id: Firelock
   category: Airlocks
@@ -208,7 +208,7 @@
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
   rotation: User
   fx: EffectRCDConstruct1
-  
+
 - type: rcd
   id: BulbLight
   category: Lighting
@@ -235,7 +235,7 @@
   - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
-    
+
 - type: rcd
   id: MVCable
   category: Electrical
@@ -248,7 +248,7 @@
   - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
-    
+
 - type: rcd
   id: HVCable
   category: Electrical
@@ -261,7 +261,7 @@
   - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
-    
+
 - type: rcd
   id: CableTerminal
   category: Electrical
@@ -273,3 +273,126 @@
   collisionMask: Impassable
   rotation: User
   fx: EffectRCDConstruct0
+
+#DH Janitor
+
+- type: rcd
+  id: JanitorialTrolley
+  category: Janitor
+  sprite: /Textures/Objects/Specific/Janitorial/janitorial_cart.rsi/icon-cart.png
+  mode: ConstructObject
+  prototype: JanitorialTrolley
+  cost: 18
+  delay: 12
+  collisionMask: Impassable
+  rotation: User
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: CratePlastic
+  category: Janitor
+  sprite: /Textures/Structures/Storage/Crates/plastic.rsi/icon.png
+  mode: ConstructObject
+  prototype: CratePlastic
+  cost: 6
+  delay: 4
+  collisionMask: Impassable
+  rotation: User
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: cleanbot
+  category: Janitor
+  sprite: Mobs/Silicon/Bots/cleanbot.rsi/cleanbot.png
+  mode: ConstructObject
+  prototype: MobCleanBot
+  cost: 16
+  delay: 9
+  collisionMask: Impassable
+  rotation: User
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: JanitorServiceLight
+  category: Lighting
+  sprite: /Textures/Interface/Radial/RCD/bulb_light.png
+  mode: ConstructObject
+  prototype: JanitorServiceLight
+  cost: 2
+  delay: 2
+  collisionMask: TabletopMachineMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PoweredWarmSmallLight
+  category: Lighting
+  sprite: /Textures/Interface/Radial/RCD/bulb_light.png
+  mode: ConstructObject
+  prototype: PoweredWarmSmallLight
+  cost: 2
+  delay: 1
+  collisionMask: TabletopMachineMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PoweredDimSmallLight
+  category: Lighting
+  sprite: /Textures/Interface/Radial/RCD/bulb_light.png
+  mode: ConstructObject
+  prototype: PoweredDimSmallLight
+  cost: 2
+  delay: 1
+  collisionMask: TabletopMachineMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: SignalButton
+  category: Electrical
+  sprite: /Textures/Structures/Wallmounts/switch.rsi/dead.png
+  mode: ConstructObject
+  prototype: SignalButton
+  cost: 3
+  delay: 3
+  rotation: User
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: HoloFan
+  category: Janitor
+  sprite: /Textures/Objects/Devices/Holoprojectors/atmos.rsi/icon.png
+  mode: ConstructObject
+  prototype: HoloFan
+  cost: 6
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: BedsheetSpawnerRDCJ
+  category: Janitor
+  sprite: /Textures/Objects/Misc/bedsheets.rsi/random_bedsheet.png
+  mode: ConstructObject
+  prototype: BedsheetSpawnerRDCJ
+  cost: 3
+  delay: 1
+  rotation: Fixed
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: HolosignWetFloor
+  category: Janitor
+  sprite: /Textures/Objects/Devices/Holoprojectors/atmos.rsi/icon.png
+  mode: ConstructObject
+  prototype:  HolosignWetFloor
+  cost: 1
+  delay: 1
+  rotation: User
+  fx: EffectRCDConstruct0
+#  rules:
+#  - MustBuildOnEmptyTile # ШЕДЕВРУМ сделать правило на пустой тайл по обьектам в RCDSystem.cs
